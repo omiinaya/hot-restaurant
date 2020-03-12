@@ -132,21 +132,13 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="script.js"></script>
     <script type="text/javascript">
-        $( document ).ready(function() {
-    
-          $.get("/api/tables/", function() {
-              $("#name").text(data.name);
-              $("#role").text(data.role);
-              $("#age").text(data.age);
-              $("#force-points").text(data.forcePoints);
-              $("#name").text(
-                "The force is not strong with this one. Your character was not found.");
-              $("#stats").hide();
-            });
-        });
-    
+    $.ajax({
+        URL: "/api/tables",
+        method: "GET"
+    }).then(function(response){
+        console.log(response);
+    });
       </script>
 </body>
 </html>

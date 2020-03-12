@@ -1,1 +1,152 @@
-test3
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hot Restaurant Reservation</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container text-center">
+        <div class="jumbotron">
+            <h1 class="display-4">Hot Restaurant</h1>
+            <hr class="my-4">
+            <p>Book your seat before they are gone!</p>
+            <a class="btn btn-primary btn1" id="viewTable" role="button" href="/">Home</a>
+            <a class="btn btn-primary btn1" id="viewHome" role="button" href="/reserve">Reserve</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                ​<div class="card">
+                    <div class="card-header">
+                        <h3><strong>Table1</strong></h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <p id="custName">Name:</p>
+                            <hr class="my-4">
+                            <p id="tableId">ID:</p>
+                            <p id="custEmail">Email:</p>
+                            <p id="cusyPhone">Phone:</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                ​<div class="card">
+                    <div class="card-header">
+                        <h3><strong>Table 2</strong></h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <p id="custName">Name:</p>
+                            <hr class="my-4">
+                            <p id="tableId">ID:</p>
+                            <p id="custEmail">Email:</p>
+                            <p id="cusyPhone">Phone:</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                ​<div class="card">
+                    <div class="card-header">
+                        <h3><strong>Table 3</strong></h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <p id="custName">Name:</p>
+                            <hr class="my-4">
+                            <p id="tableId">ID:</p>
+                            <p id="custEmail">Email:</p>
+                            <p id="cusyPhone">Phone:</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                ​<div class="card">
+                    <div class="card-header">
+                        <h3><strong>Table 4</strong></h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <p id="custName">Name:</p>
+                            <hr class="my-4">
+                            <p id="tableId">ID:</p>
+                            <p id="custEmail">Email:</p>
+                            <p id="cusyPhone">Phone:</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                ​<div class="card">
+                    <div class="card-header">
+                        <h3><strong>Table 5</strong></h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <p id="custName">Name:</p>
+                            <hr class="my-4">
+                            <p id="tableId">ID:</p>
+                            <p id="custEmail">Email:</p>
+                            <p id="cusyPhone">Phone:</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                ​<div class="card">
+                    <div class="card-header">
+                        <h3><strong>Table Reservation</strong></h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        $( document ).ready(function() {
+    
+          $.get("/api/tables/", function() {
+              $("#name").text(data.name);
+              $("#role").text(data.role);
+              $("#age").text(data.age);
+              $("#force-points").text(data.forcePoints);
+              $("#name").text(
+                "The force is not strong with this one. Your character was not found.");
+              $("#stats").hide();
+            });
+        });
+    
+      </script>
+</body>
+</html>

@@ -63,8 +63,7 @@
                 email: $("#email").val().trim(),
                 uniqueID: $("#ID").val().trim(),
             };
-            $.post("/api/tables", newTable) 
-                .then(function (data) {
+            $.post("/api/tables", newTable) .then(function (data) {
                     console.log("rsvp.html", data);
                     alert("Adding Reservation...");
                 });
